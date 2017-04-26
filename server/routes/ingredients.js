@@ -1,20 +1,26 @@
 var express = require("express");
 var router = express.Router();
-var passport = require("passport");
-var path = require("path");
+var mongoose = require("mongoose");
 
-// Handles Ajax request for user information if user is authenticated
+var IngredientsSchema = mongoose.Schema({
+  "Ingredient": String,
+  "User_id": String
+}); // end IngredientsSchema
+
+var Ingredients = mongoose.model("Ingredients", IngredientsSchema);
+
+// GET Route to return all ingredients for the authenticated user
 router.get("/", function(req, res) {
   console.log("get /user route");
   // check if logged in
   if(req.isAuthenticated()) {
     // send back user object from database
-    console.log("logged in");
-    var userInfo = {
-      username : req.user.username,
-      recipes : req.user.recipes
-    };
-    res.send(userInfo);
+    console.log("logged in with user", req.user._id);
+    // Query for ingredients
+
+
+
+    res.send();
   } else {
     // failure best handled on the server. do redirect here.
     console.log("not logged in");
@@ -23,13 +29,7 @@ router.get("/", function(req, res) {
   }
 });
 
-// clear all server session information about this user
-router.get("/logout", function(req, res) {
-  // Use passport"s built-in method to log out the user
-  console.log("Logged out");
-  req.logOut();
-  res.sendStatus(200);
-});
+// POST Route to add ingredient for the authenticated user
 
 
 module.exports = router;

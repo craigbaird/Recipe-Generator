@@ -2,6 +2,11 @@
   <div ng-include="'views/partials/nav.html'"></div>
 
   <p>
-    In Info
+    Add some ingredients
   </p>
+
+  <form name="ingredientsForm" ng-submit="addIngredient(ingredient)">
+    <input type="text" placeholder="search" ng-model="ingredient.name">
+    <input type="submit" value="Submit">
+  </form>
 </div>
