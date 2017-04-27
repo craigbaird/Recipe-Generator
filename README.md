@@ -12,9 +12,11 @@
 
 [X] Input field that lets user save ingredients to DB
 
-[ ] Display ingredients on view
+[X] Display ingredients on view
 
-[ ] pre-populate dropdown from DB
+[X] Pre-populate dropdown from DB
+
+[ ] Send list of ingredients to API
 
 [ ] Build Find By Ingredients feature - 16hrs
 

@@ -1,20 +1,8 @@
-myApp.controller("InfoController", ["$scope", "$http", "$location", "UserService", function($scope, $http, $location, UserService) {
+myApp.controller("InfoController", ["$scope", "$http", "$location", "ApiService", "UserService", function($scope, $http, $location, ApiService, UserService) {
   var ingredients = this;
   ingredients.logout = UserService.logout;
 
   ingredients.ingredient = {};
-
-
-
-
-  // ingredients.submit = function(){
-  //   var input = ingredients.input.title;
-  //   RecipeService.getSpoonacular(input);
-  // }; // end ingredients.submit
-  // ingredients.infoFromApi = RecipeService.infoFromApi;
-
-
-
 
   var addIngredient = function(ingredientObject) {
     console.log('ADDING INGREDIENT', ingredientObject);
@@ -28,16 +16,35 @@ myApp.controller("InfoController", ["$scope", "$http", "$location", "UserService
     $http.get('/ingredients').then(function(response){
       console.log("All Current Ingredients: ", response);
        ingredients.list = response.data;
-       console.log(response.data);
+      //  console.log(response.data);
 
     });// ends get to favorites
   };
-
-  $scope.clear = function(){
-      $scope.myModel = undefined;
-
-
-
   ingredients.addIngredient = addIngredient;
-  // getIngredients();
-}]);
+  getIngredients();
+
+  // Button functionality for dropdown list
+  $scope.submit = function(){
+    console.log("submit button clicked", $scope.myModel);
+
+  // Sends value to API
+    var input = $scope.myModel;
+    ApiService.getSpoonacular(input);
+  }; // end ingredients.submit
+  ingredients.infoFromApi = ApiService.infoFromApi;
+
+
+}]); // end myApp.controller
+
+myApp.factory("ApiService", ["$http", function($http){
+  var infoFromApi = {};
+    return {
+      infoFromApi : infoFromApi,
+      getSpoonacular : function(ingredients){
+        $http.get("/api/" + ingredients).then(function(response){
+        infoFromApi.response = response;
+        console.log("data from Api", response);
+        }); //end $http.get
+      } //end getSpoonacular
+    }; //end return
+}]); // end recipeApp.factory

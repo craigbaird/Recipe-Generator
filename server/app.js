@@ -12,6 +12,7 @@ var index = require("./routes/index");
 var user = require("./routes/user");
 var register = require("./routes/register");
 var ingredients = require("./routes/ingredients");
+var api = require("./routes/api");
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -37,6 +38,7 @@ app.use(passport.session());
 app.use("/register", register);
 app.use("/user", user);
 app.use("/ingredients", ingredients);
+app.use("/api", api);
 app.use("/", index);
 
 // Mongo Connection //
