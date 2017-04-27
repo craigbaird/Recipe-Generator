@@ -18,8 +18,9 @@
 <!-- <md-button ng-click="clear()">Clear</md-button> -->
 <md-button ng-click="submit()">Submit</md-button>
   <div class="infoContainer">
-    <p>{{ingredients.infoFromApi.response.data}}</p>
+    <!-- <p>{{ingredients.infoFromApi.response.data}}</p> -->
+  <div ng-value="title.title" ng-repeat="title in ingredients.infoFromApi.response">{{ title.title }}</div>
   </div>
-</div> <!--end TwoController -->
+</div>
   </form>
 </div>

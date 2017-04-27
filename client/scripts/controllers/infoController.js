@@ -42,7 +42,7 @@ myApp.factory("ApiService", ["$http", function($http){
       infoFromApi : infoFromApi,
       getSpoonacular : function(ingredients){
         $http.get("/api/" + ingredients).then(function(response){
-        infoFromApi.response = response;
+        infoFromApi.response = response.data;
         console.log("data from Api", response);
         }); //end $http.get
       } //end getSpoonacular
