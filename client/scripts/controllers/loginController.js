@@ -27,7 +27,7 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
       if($scope.user.username === "" || $scope.user.password === "") {
         $scope.message = "Choose a username and password!";
       } else {
-        console.log("sending to server...", $scope.user);
+        // console.log("sending to server...", $scope.user);
         $http.post("/register", $scope.user).then(function(response) {
           console.log("success");
           $location.path("/home");

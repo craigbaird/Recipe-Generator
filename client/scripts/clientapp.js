@@ -26,6 +26,7 @@ myApp.config(["$routeProvider", "$locationProvider",
     .when("/info", {
       templateUrl: "/views/templates/info.html",
       controller: "InfoController",
+      controllerAs: "ingredients",
       resolve: {
         getuser : ["UserService", function(UserService){
           return UserService.getuser();

@@ -10,9 +10,11 @@
 
 [X] Set up table in MongoDB to pre populate data
 
-[ ] Input field that lets user save ingredients to DB
+[X] Input field that lets user save ingredients to DB
 
 [ ] Display ingredients on view
+
+[ ] pre-populate dropdown from DB
 
 [ ] Build Find By Ingredients feature - 16hrs
 
@@ -24,10 +26,7 @@
 
 [ ] Deploy to Heroku. - 5hrs
 
-
 #STRETCH GOALS
-
-[ ] Set up user validation and sign in. - 5hrs
 
 [ ] Build landing Page. - 4hrs
 

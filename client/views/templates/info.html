@@ -5,8 +5,22 @@
     Add some ingredients
   </p>
 
-  <form name="ingredientsForm" ng-submit="addIngredient(ingredient)">
-    <input type="text" placeholder="search" ng-model="ingredient.name">
+  <form name="ingredientsForm" ng-submit="ingredients.addIngredient(ingredients.ingredient)">
+    <input type="text" placeholder="ingredient" ng-model="ingredients.ingredient.name">
     <input type="submit" value="Submit">
+    <div ng-repeat="ingredient in ingredients.list">
+      {{ingredient.ingredient}}
+    </div>
+
+  <div ng-controller="InfoController" layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations" ng-app="recipeApp">
+    <md-select multiple="{{false}}" placeholder="Vegetables" ng-model="myModel">
+      <md-option value="Broccoli">Broccoli</md-option>
+      <md-option value="Spinach">Spinach</md-option>
+      <md-option value="Green Beans">Green Beans</md-option>
+      <md-option value="Corn">Corn</md-option>
+    </md-select>
+  {{myModel}}
+<md-button ng-click="clear()">Clear</md-button>
+</div> <!--end TwoController -->
   </form>
 </div>
