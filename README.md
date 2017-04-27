@@ -16,9 +16,11 @@
 
 [X] Pre-populate dropdown from DB
 
-[ ] Send list of ingredients to API
+[X] Send list of ingredients to API
 
-[ ] Build Find By Ingredients feature - 16hrs
+[X] Display Recipe Info to DOM
+
+[X] Build Find By Ingredients feature - 16hrs
 
 [ ] Build Recipe Results feature to display info from the API. - 8hrs
 

@@ -25,10 +25,10 @@ myApp.controller("InfoController", ["$scope", "$http", "$location", "ApiService"
 
   // Button functionality for dropdown list
   $scope.submit = function(){
-    console.log("submit button clicked", $scope.myModel);
+    console.log("submit button clicked", $scope.selectedIng);
 
   // Sends value to API
-    var input = $scope.myModel;
+    var input = $scope.selectedIng;
     ApiService.getSpoonacular(input);
   }; // end ingredients.submit
   ingredients.infoFromApi = ApiService.infoFromApi;
