@@ -36,19 +36,19 @@ myApp.controller("InfoController", ["$scope", "$http", "$location", "ApiService"
 
   var learnMore = function(id){
     console.log("hi", id);
-    getSpoonacular2(id);
+    ApiService.getDetails(id);
     //$location.url('/detail');
      }; // end $http.get
 
   ingredients.learnMore = learnMore;
-  ingredients.infoFromApi2 = ApiService.infoFromApi2;
+  ingredients.detailsFromApi = ApiService.detailsFromApi;
 
 
 }]); // end myApp.controller
 
 myApp.factory("ApiService", ["$http", function($http){
   var infoFromApi = {};
-  var infoFromApi2 = {};
+  var detailsFromApi = {};
     return {
       infoFromApi : infoFromApi,
       getSpoonacular : function(ingredients){
@@ -58,13 +58,13 @@ myApp.factory("ApiService", ["$http", function($http){
         }); //end $http.get
       },//end getSpoonacular
 
-      infoFromApi2 : infoFromApi2,
-      getSpoonacular2 : function(id){
+      detailsFromApi : detailsFromApi,
+      getDetails : function(id){
         $http.get("/api/detail/" + id).then(function(response){
-          infoFromApi2.response = response.data;
+          detailsFromApi.response = response.data;
           console.log("data from Api", response);
         }); // end $http.get
-      } // end getSpoonacular2
+      } // end getDetails
 
     }; //end return
 }]); // end recipeApp.factory
