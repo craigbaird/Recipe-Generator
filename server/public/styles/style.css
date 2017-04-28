@@ -39,3 +39,15 @@
 .btn-danger{
     margin-left: 10px;
 }
+.infoContainer {
+  width:33%;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  float: left;
+  float: right;
+}
+.learnMoreBtn {
+  margin-bottom: 20px;
+}

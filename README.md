@@ -2,25 +2,25 @@
 
 #BASE MODE
 
-[X] Setup file structure, source all frameworks, and install all dependencies, set up basic call to Spoonacular API. - 4hrs - took 3 hrs
+[X] Setup file structure, source all frameworks, and install all dependencies, set up basic call to Spoonacular API. - Estimate 4hrs, Actual 3 hrs
 
-[X] Source in Angular Material
+    [X] Source in Angular Material
 
-[X] Set up user validation and sign in. - 5hrs
+[X] Set up user validation and sign in. - Estimate 5hrs, Actual 5hrs
 
-[X] Set up table in MongoDB to pre populate data
+[X] Build Find By Ingredients feature - Estimate 16hrs, Actual 17.5hrs
 
-[X] Input field that lets user save ingredients to DB
+    [X] Set up table in MongoDB to pre populate data
 
-[X] Display ingredients on view
+    [X] Input field that lets user save ingredients to DB
 
-[X] Pre-populate dropdown from DB
+    [X] Display ingredients on view
 
-[X] Send list of ingredients to API
+    [X] Pre-populate dropdown from DB
 
-[X] Display Recipe Info to DOM
+    [X] Send list of ingredients to API
 
-[X] Build Find By Ingredients feature - 16hrs
+    [X] Display Recipe Info to DOM
 
 [ ] Build Recipe Results feature to display info from the API. - 8hrs
 
