@@ -24,8 +24,8 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiSer
   getIngredients();
 
   // Button functionality for dropdown list
-  $scope.submit = function(){
-    console.log("submit button clicked", $scope.selectedIng);
+  $scope.findRecipes = function(){
+    console.log("Find Recipes button clicked", $scope.selectedIng);
 
   // Sends value to API
     var input = $scope.selectedIng;

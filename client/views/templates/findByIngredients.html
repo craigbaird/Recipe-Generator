@@ -14,24 +14,7 @@
   <md-select multiple="{{false}}" placeholder="Ingredients" ng-model="selectedIng">
     <md-option ng-value="ingredient.ingredient" ng-repeat="ingredient in ingredients.list">{{ ingredient.ingredient }}</md-option>
   </md-select>
-  <md-button ng-click="submit()">Find Recipes</md-button>
-
-  <!-- Display Info From API -->
-  <div class="infoContainer">
-  <div id="imgContainer" ng-value="image.image" ng-repeat="image in ingredients.infoFromApi.response">
-    <p class="recipeTitles">{{image.title}}  </p>
-    <img class="image" ng-src="{{ image.image }}"/>
-
-    <!-- Learn More Buttons -->
-    <form name="learnMoreForm" ng-submit="ingredients.learnMore(image.id)">
-      <input type="submit" value="Learn More">
-    </form>
-
-
-
-  </div>  <!-- end imgContainer -->
-<p>{{ingredients.detailsFromApi.response.summary}}</p> 
-  </div> <!-- end infoContainer -->
-</div>
-  <!-- </form> -->
-</div>
+  <!-- on submit user is redirected to the recipe Results page -->
+  <a href="#recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
+  </div> <!-- end div layout column -->
+</div>  <!-- end div container -->
