@@ -1,6 +1,10 @@
 .instructions .container h1 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 700;
+}
+
+.lead {
+  font-size: 25px;
 }
 
 .instructions {
@@ -39,15 +43,22 @@
 .btn-danger{
     margin-left: 10px;
 }
+
 .infoContainer {
   width:33%;
   overflow: hidden;
 }
+
 .image {
   width: 100%;
   float: left;
   float: right;
 }
+
 .learnMoreBtn {
   margin-bottom: 20px;
+}
+
+.pageLink {
+  font-size: 20px;
 }

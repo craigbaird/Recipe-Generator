@@ -1,4 +1,4 @@
-myApp.controller("InfoController", ["$scope", "$http", "$location", "ApiService", "UserService", function($scope, $http, $location, ApiService, UserService) {
+myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiService", "UserService", function($scope, $http, $location, ApiService, UserService) {
   var ingredients = this;
   ingredients.logout = UserService.logout;
 
@@ -33,14 +33,12 @@ myApp.controller("InfoController", ["$scope", "$http", "$location", "ApiService"
   }; // end ingredients.submit
   ingredients.infoFromApi = ApiService.infoFromApi;
 
-
-  var learnMore = function(id){
-    console.log("hi", id);
+  // When "learn more" button is clicked sends ID to api for description
+  ingredients.learnMore = function(id){
     ApiService.getDetails(id);
     //$location.url('/detail');
      }; // end $http.get
 
-  ingredients.learnMore = learnMore;
   ingredients.detailsFromApi = ApiService.detailsFromApi;
 
 

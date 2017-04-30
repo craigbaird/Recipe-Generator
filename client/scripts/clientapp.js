@@ -23,12 +23,32 @@ myApp.config(["$routeProvider", "$locationProvider",
         }]
       }
     })
-    .when("/info", {
-      templateUrl: "/views/templates/info.html",
-      controller: "InfoController",
+    .when("/findByIngredients", {
+      templateUrl: "/views/templates/findByIngredients.html",
+      controller: "FindByIngController",
       controllerAs: "ingredients",
       resolve: {
         getuser : ["UserService", function(UserService){
+          return UserService.getuser();
+        }]
+      }
+    })
+    .when("/recipeResults", {
+      templateUrl: "/views/templates/recipeResults.html",
+      controller: "FindByIngController",
+      controllerAs: "ingredients",
+      resolve: {
+        getuser: ["UserService", function(UserService){
+          return UserService.getuser();
+        }]
+      }
+    })
+    .when("/recipeDetails", {
+      templateUrl: "/views/templates/recipeDetails.html",
+      controller: "FindByIngController",
+      controllerAs: "ingredients",
+      resolve: {
+        getuser: ["UserService", function(UserService){
           return UserService.getuser();
         }]
       }
