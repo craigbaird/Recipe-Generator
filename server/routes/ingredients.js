@@ -11,11 +11,11 @@ var Ingredients = mongoose.model("Ingredients", IngredientsSchema);
 
 // GET Route to return all ingredients for the authenticated user
 router.get("/", function(req, res) {
-  console.log("get /user route");
+  // console.log("get /user route");
   // check if logged in
   if(req.isAuthenticated()) {
     // send back user object from database
-    console.log("logged in with user", req.user._id);
+    // console.log("logged in with user", req.user._id);
     // Query for ingredients
     Ingredients.find(function(err, allIngredients){
       if (err){
@@ -37,7 +37,7 @@ router.get("/", function(req, res) {
 
 // POST Route to add ingredient for the authenticated user
 router.post("/", function(req, res, next) {
-    console.log('POST',req.body);
+    // console.log('POST',req.body);
     var ingredientToSave = {
       ingredient : req.body.name,
       user_id : req.user._id

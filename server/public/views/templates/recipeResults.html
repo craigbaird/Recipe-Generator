@@ -7,12 +7,15 @@
   <div id="imgContainer" ng-value="image.image" ng-repeat="image in ingredients.infoFromApi.response">
     <p class="recipeTitles">{{image.title}}  </p>
     <img class="image" ng-src="{{ image.image }}"/>
+    <p>{{ingredients.detailsFromApi.response.summary}}</p>
+    <p>{{ingredients.recipeInstructions.response.data}}</p>
 
     <!-- Learn More Buttons -->
     <form name="learnMoreForm" ng-submit="ingredients.learnMore(image.id)">
       <input type="submit" value="Learn More">
     </form>
   </div>  <!-- end imgContainer -->
-<p>{{ingredients.detailsFromApi.response.summary}}</p>
+<!-- <p>{{ingredients.detailsFromApi.response.summary}}</p>
+<p>{{ingredients.recipeInstructions.response.data}}</p> -->
   </div> <!-- end infoContainer -->
 </div>

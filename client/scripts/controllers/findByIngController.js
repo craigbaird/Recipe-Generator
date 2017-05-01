@@ -36,10 +36,12 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiSer
   // When "learn more" button is clicked sends ID to api for description
   ingredients.learnMore = function(id){
     ApiService.getDetails(id);
+    ApiService.getInstructions(id);
     //$location.url('/detail');
      }; // end $http.get
 
-  ingredients.detailsFromApi = ApiService.detailsFromApi;
+  // ingredients.detailsFromApi = ApiService.detailsFromApi;
+  ingredients.recipeInstructions = ApiService.recipeInstructions;
 
 
 }]); // end myApp.controller
@@ -47,12 +49,13 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiSer
 myApp.factory("ApiService", ["$http", function($http){
   var infoFromApi = {};
   var detailsFromApi = {};
+  var recipeInstructions = {};
     return {
       infoFromApi : infoFromApi,
       getSpoonacular : function(ingredients){
         $http.get("/api/" + ingredients).then(function(response){
         infoFromApi.response = response.data;
-        console.log("data from Api", response);
+        console.log("relevant recipes", response);
         }); //end $http.get
       },//end getSpoonacular
 
@@ -60,7 +63,15 @@ myApp.factory("ApiService", ["$http", function($http){
       getDetails : function(id){
         $http.get("/api/detail/" + id).then(function(response){
           detailsFromApi.response = response.data;
-          console.log("data from Api", response);
+          console.log("recipe summary", response);
+        }); // end $http.get
+      }, // end getDetails
+
+      recipeInstructions : recipeInstructions,
+      getInstructions : function(id){
+        $http.get("/api/instructions/" + id).then(function(response){
+          recipeInstructions.response = response.data;
+          console.log("recipe instructions", response);
         }); // end $http.get
       } // end getDetails
 

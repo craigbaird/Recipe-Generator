@@ -6,7 +6,7 @@ var User = require("../models/user");
 // Only runs during authentication
 // Stores info on req.session.passport.user
 passport.serializeUser(function(user, done) {
-  console.log("serialized: ", user);
+  // console.log("serialized: ", user);
   done(null, user.id);
 });
 
@@ -19,7 +19,7 @@ passport.deserializeUser(function(id, done) {
       done(err);
     }
 
-    console.log("-----------------------------------------------\ndeserialized: ", user.id);
+    // console.log("-----------------------------------------------\ndeserialized: ", user.id);
     done(null, user);
   });
 });
@@ -51,7 +51,7 @@ passport.use("local", new localStrategy({
 
           if(isMatch) {
             // all good, populate user object on the session through serializeUser
-            console.log("userStrategy.js :: all good");
+            // console.log("userStrategy.js :: all good");
             return(done(null, user));
           } else {
             // no good.
