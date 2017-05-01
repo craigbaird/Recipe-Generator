@@ -7,7 +7,7 @@ var unirest = require("unirest");
 router.get("/:ingredients", function(req, res){
   var ingredients = req.params.ingredients;
   unirest.get("https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients"+
-            "?fillIngredients=false&ingredients=" + ingredients + "&limitLicense=false&number=5&ranking=1")
+            "?fillIngredients=false&ingredients=" + ingredients + "&limitLicense=true&number=8&ranking=1")
   .header("X-Mashape-Key", "5odaehKxNbmshul9AvfFy6EBdgBXp1Dcw1rjsnR8zfBgCuY9mH")
   .header("Accept", "application/json")
   .end(function (result) {

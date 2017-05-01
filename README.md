@@ -20,9 +20,13 @@
 
     [X] Send list of ingredients to API
 
-    [X] Display Recipe Info to DOM
+    [X] Display recipe info to DOM
 
 [ ] Build Recipe Results feature to display info from the API. - 8hrs
+
+    [ ] Learn More button to display recipe summary for each individual recipe
+
+    [ ] Make Recipe button to navigate to Recipe Details view 
 
 [ ] Build Recipe Detail Feature that shows a recipe with instruction to make it. - 6hrs
 

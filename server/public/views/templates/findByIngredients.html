@@ -1,19 +1,22 @@
 <div class="container">
   <div ng-include="'views/partials/nav.html'"></div>
+  <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
 
-  <!-- Adding Ingredients -->
+  <h1>Find By Ingredients</h1>
+
+  <!-- Add Ingredients -->
   <p>Add some ingredients</p>
-  <form name="ingredientsForm" ng-submit="ingredients.addIngredient(ingredients.ingredient)">
-    <input type="text" placeholder="ingredient" ng-model="ingredients.ingredient.name">
+  <form name="AddIngForm" ng-submit="recipe.addIngredient(recipe.ingredient)">
+    <input type="text" placeholder="ingredient" ng-model="recipe.ingredient.name">
     <input type="submit" value="Submit">
   </form>
-  <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
 
   <!-- Find Recipes By Ingredients -->
   <p>Select Ingredients You Have</p>
   <md-select multiple="{{false}}" placeholder="Ingredients" ng-model="selectedIng">
-    <md-option ng-value="ingredient.ingredient" ng-repeat="ingredient in ingredients.list">{{ ingredient.ingredient }}</md-option>
+    <md-option ng-value="recipe.ingredient" ng-repeat="recipe in recipe.list">{{ recipe.ingredient }}</md-option>
   </md-select>
+
   <!-- on submit user is redirected to the recipe Results page -->
   <a href="#recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
   </div> <!-- end div layout column -->

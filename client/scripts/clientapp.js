@@ -26,7 +26,7 @@ myApp.config(["$routeProvider", "$locationProvider",
     .when("/findByIngredients", {
       templateUrl: "/views/templates/findByIngredients.html",
       controller: "FindByIngController",
-      controllerAs: "ingredients",
+      controllerAs: "recipe",
       resolve: {
         getuser : ["UserService", function(UserService){
           return UserService.getuser();
@@ -36,7 +36,7 @@ myApp.config(["$routeProvider", "$locationProvider",
     .when("/recipeResults", {
       templateUrl: "/views/templates/recipeResults.html",
       controller: "FindByIngController",
-      controllerAs: "ingredients",
+      controllerAs: "recipe",
       resolve: {
         getuser: ["UserService", function(UserService){
           return UserService.getuser();
@@ -46,7 +46,7 @@ myApp.config(["$routeProvider", "$locationProvider",
     .when("/recipeDetails", {
       templateUrl: "/views/templates/recipeDetails.html",
       controller: "FindByIngController",
-      controllerAs: "ingredients",
+      controllerAs: "recipe",
       resolve: {
         getuser: ["UserService", function(UserService){
           return UserService.getuser();
