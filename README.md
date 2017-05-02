@@ -22,15 +22,19 @@
 
     [X] Display recipe info to DOM
 
-[ ] Build Recipe Results feature to display info from the API. - 8hrs
+[X] Build Recipe Results feature to display info from the API. - 8hrs
 
-    [ ] Learn More button to display recipe summary for each individual recipe
+    [X] Learn More button to display recipe summary for each individual recipe
 
-    [ ] Make Recipe button to navigate to Recipe Details view 
+    [X] Make Recipe button to navigate to Recipe Details view
 
-[ ] Build Recipe Detail Feature that shows a recipe with instruction to make it. - 6hrs
+[X] Build Recipe Detail Feature that shows a recipe with instruction to make it. - 6hrs
+
+[ ] Add back buttons to navigate back to previous pages
 
 [ ] Focus on Bootstrap and Angular Material styling for all views. - 8hrs
+
+[ ] Timer to wait 2 seconds after login then navigate to Find By Ingredients
 
 [ ] Deploy to Heroku. - 5hrs
 

@@ -1,4 +1,5 @@
 <div class="container">
+  <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
   <div ng-include="'views/partials/nav.html'"></div>
   <h2>Recipe Results</h2>
 
@@ -9,7 +10,8 @@
       <img class="image" ng-src="{{ image.image }}"/>
 
       <!-- Learn More Buttons -->
-      <a href="#recipeDetails"><button ng-click="recipe.learnMore(image.id)">Learn More</button></a>
+      <a href="#recipeDetails"><md-button ng-click="recipe.learnMore(image.id)">Learn More</md-button></a>
     </div>  <!-- end imgContainer -->
   </div> <!-- end infoContainer -->
+  </div>
 </div>

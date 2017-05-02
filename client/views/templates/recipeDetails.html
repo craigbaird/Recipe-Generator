@@ -1,12 +1,14 @@
 <div class="container">
-  <div ng-include="'views/partials/nav.html'"></div>
-  <h2>Recipes Details</h2>
+  <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
+    <div ng-include="'views/partials/nav.html'"></div>
+    <h2>Recipes Details</h2>
 
-  <!-- Display Info From API -->
-  <div class="infoContainer">
-      <h3>{{recipe.detailsFromApi.response.title}}</h3>
-      <img class="image" ng-src="{{ recipe.recipeInstructions.response.image }}"/>
-      <p ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
-      <p ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
-  </div> <!-- end infoContainer -->
+    <!-- Display Info From API -->
+    <div class="infoContainer">
+        <h3>{{recipe.detailsFromApi.response.title}}</h3>
+        <img class="image" ng-src="{{ recipe.recipeInstructions.response.image }}"/>
+        <p ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
+        <p ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
+    </div> <!-- end infoContainer -->
+  </div>
 </div>
