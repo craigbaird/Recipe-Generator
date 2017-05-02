@@ -4,6 +4,10 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
   recipe.logout = UserService.logout;
   recipe.ingredient = {};
 
+  function FindByIngController($scope) {
+  $scope.currentNavItem = 'findByIng';
+  }
+
   recipe.addIngredient = function(ingredientObject) {
     console.log('ADDING INGREDIENT', ingredientObject);
     // input post new ingredients when you post refresh dropdown ingredients
