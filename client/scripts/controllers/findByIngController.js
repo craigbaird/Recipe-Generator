@@ -1,4 +1,4 @@
-myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiService", "UserService", function($scope, $http, $location, ApiService, UserService) {
+myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiService", "UserService", function($scope, $http, $location, ApiService, UserService) {
   console.log('FindByIngController loaded');
   var recipe = this;
   recipe.logout = UserService.logout;
@@ -43,30 +43,11 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location", "ApiSer
 
 }]); // end myApp.controller
 
-
-// everythingArray = []
-//
-//  function GET (array) {
-//  for (item of Array)
-//   var obj = {
-//     id : item.id
-//     name : item.name
-//     summary :
-//     recipe :
-//   }
-//    get {(return summary)
-//      obj.summary = summary
-//    } get {(return recipe)
-//      obj.recipe = recipe
-//    }
-//    everythingArray.push(obj)
-
-
-myApp.factory("ApiService", ["$http", function($http){
+myApp.factory("ApiService", ["$http", '$sce', function($http, $sce){
   var infoFromApi = {};
   var detailsFromApi = {};
   var recipeInstructions = {};
-
+  // var summary = {};
   return {
     infoFromApi : infoFromApi,
     getRecipes : function(ingredients){
@@ -80,24 +61,21 @@ myApp.factory("ApiService", ["$http", function($http){
     getDetails : function(id){
       $http.get("/api/detail/" + id).then(function(response){
         detailsFromApi.response = response.data;
-        console.log("recipe summary", response);
-        // for(var i = 0; i < infoFromApi.response.length; i++) {
-        //   if(infoFromApi.response[i].id) {
-        //   response[i].summary = summary;
-        //   }
-        //   console.log(summary);
-        // }
+        detailsFromApi.response.summaryTrusted = $sce.trustAsHtml(detailsFromApi.response.summary);
+        console.log("recipe details", response);
       }); // end $http.get
     }, // end getDetails
 
     recipeInstructions : recipeInstructions,
     getInstructions : function(id){
-      console.log("id", id);
+      // console.log("id", id);
       $http.get("/api/instructions/" + id).then(function(response){
         recipeInstructions.response = response.data;
+        recipeInstructions.response.summaryTrusted = $sce.trustAsHtml(recipeInstructions.response.instructions);
         console.log("recipe instructions", response);
       }); // end $http.get
     } // end getDetails
 
   }; //end return
+
 }]); // end recipeApp.factory

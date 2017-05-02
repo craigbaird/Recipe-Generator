@@ -1,15 +1,16 @@
 .instructions .container h1 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
 }
 
 .lead {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .instructions {
     background-color: #5b843e;
-    color: #DDDDDD;
+    color: white;
+
 }
 
 #entryForm {
@@ -50,7 +51,7 @@
 }
 
 .recipeTitles{
-  font-size: 30px;
+  font-size: 20px;
 }
 .image {
   width: 100%;

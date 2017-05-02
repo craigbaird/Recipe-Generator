@@ -1,20 +1,12 @@
-<!-- <div class="container">
-  <div ng-include="'views/partials/nav.html'"></div>
-  <h1>Recipe Details</h1>
-</div> -->
 <div class="container">
   <div ng-include="'views/partials/nav.html'"></div>
-  <h1>Recipes Details</h1>
+  <h2>Recipes Details</h2>
 
   <!-- Display Info From API -->
   <div class="infoContainer">
-    <div id="imgContainer" ng-value="image.image" ng-repeat="image in recipe.infoFromApi.response">
-      <p class="recipeTitles">{{image.title}}  </p>
-      <img class="image" ng-src="{{ image.image }}"/>
-
-      <p>{{recipe.detailsFromApi.response.summary}}</p>
-      <!-- <p>{{recipe.recipeInstructions.response.data}}</p> -->
-
-    </div>  <!-- end imgContainer -->
+      <h3>{{recipe.detailsFromApi.response.title}}</h3>
+      <img class="image" ng-src="{{ recipe.recipeInstructions.response.image }}"/>
+      <p ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
+      <p ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
   </div> <!-- end infoContainer -->
 </div>
