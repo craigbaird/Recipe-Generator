@@ -11,7 +11,6 @@ router.get("/:ingredients", function(req, res){
   .header("X-Mashape-Key", "5odaehKxNbmshul9AvfFy6EBdgBXp1Dcw1rjsnR8zfBgCuY9mH")
   .header("Accept", "application/json")
   .end(function (result) {
-  // console.log(result.status, result.headers, result.body);
   res.send(result.body);
   }); // end unirest.get
 });

@@ -30,7 +30,7 @@
 
 [X] Build Recipe Detail Feature that shows a recipe with instruction to make it. - 6hrs
 
-[ ] Add back buttons to navigate back to previous pages
+[X] Add back buttons to navigate back to previous pages
 
 [ ] Focus on Bootstrap and Angular Material styling for all views. - 8hrs
 

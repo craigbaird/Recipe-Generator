@@ -1,7 +1,8 @@
 <div class="container">
   <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
     <div ng-include="'views/partials/nav.html'"></div>
-
+    <br><br>
+    <a href="#/user"><md-button> < go back </md-button></a>
     <h2>Find By Ingredients</h2>
 
     <br>
@@ -23,6 +24,6 @@
       </md-select>
     <br>
     <!-- on submit user is redirected to the recipe Results page -->
-    <a href="#recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
+    <a href="#/recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
   </div> <!-- end div layout column -->
 </div>  <!-- end div container -->
