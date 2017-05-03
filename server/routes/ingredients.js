@@ -10,14 +10,20 @@ var IngredientsSchema = mongoose.Schema({
 var Ingredients = mongoose.model("Ingredients", IngredientsSchema);
 
 // GET Route to return all ingredients for the authenticated user
+
+
 router.get("/", function(req, res) {
+
+
   // console.log("get /user route");
   // check if logged in
   if(req.isAuthenticated()) {
+    var user = req.user._id;
+    console.log(user);
     // send back user object from database
     // console.log("logged in with user", req.user._id);
     // Query for ingredients
-    Ingredients.find(function(err, allIngredients){
+    Ingredients.find({user_id : user}, function(err, allIngredients){
       if (err){
         console.log(err);
         res.sendStatus(500);

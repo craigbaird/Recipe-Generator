@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
     // console.log("logged in");
     var userInfo = {
       username : req.user.username,
-      recipes : req.user.recipes
+      // recipes : req.user.recipes
     };
     res.send(userInfo);
   } else {

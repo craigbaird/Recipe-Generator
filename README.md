@@ -32,9 +32,9 @@
 
 [X] Add back buttons to navigate back to previous pages
 
-[ ] Focus on Bootstrap and Angular Material styling for all views. - 8hrs
+[X] Focus on Bootstrap and Angular Material styling for all views. - 8hrs
 
-[ ] Timer to wait 2 seconds after login then navigate to Find By Ingredients
+[ ] Figure out user authentication
 
 [ ] Deploy to Heroku. - 5hrs
 
