@@ -12,7 +12,6 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
 //      $scope.currentLink = getCurrentLinkFromRoute(current);
 //    });
 //   });
-
   recipe.addIngredient = function(ingredientObject) {
     console.log('ADDING INGREDIENT', ingredientObject);
     // input post new ingredients when you post refresh dropdown ingredients

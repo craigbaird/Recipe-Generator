@@ -1,9 +1,12 @@
 myApp.controller("LoginController", ["$scope", "$http", "$location", "UserService", function($scope, $http, $location, UserService) {
+
     $scope.user = {
       username: "",
       password: ""
     };
     $scope.message = "";
+
+
 
     $scope.login = function() {
       if($scope.user.username === "" || $scope.user.password === "") {

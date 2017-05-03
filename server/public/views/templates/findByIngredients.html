@@ -3,11 +3,11 @@
     <div ng-include="'views/partials/nav.html'"></div>
     <br><br>
     <a href="#/user"><md-button> < go back </md-button></a>
-    <h2>Find By Ingredients</h2>
+    <h2 class="md-display-2">Find By Ingredients</h2>
 
     <br>
     <!-- Add Ingredients -->
-    <h4>Add some ingredients</h4>
+    <h4 class="md-headline">Add some ingredients</h4>
     <div layout="row">
       <md-input-container>
         <label>ingredient</label>
@@ -18,7 +18,7 @@
 
     <br><br>
     <!-- Find Recipes By Ingredients -->
-    <h4>Select Ingredients You Have</h4>
+    <h4 class="md-headline">Select Ingredients You Have</h4>
       <md-select multiple="{{false}}" placeholder="Ingredients" ng-model="selectedIng">
         <md-option ng-value="recipe.ingredient" ng-repeat="recipe in recipe.list">{{ recipe.ingredient }}</md-option>
       </md-select>

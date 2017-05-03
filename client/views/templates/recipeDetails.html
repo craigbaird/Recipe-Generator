@@ -2,15 +2,15 @@
   <div layout="column" layout-align="center center" style="min-height: 300px;" class="selectdemoValidations">
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/recipeResults"><md-button> < go back </md-button></a>
-    <h2>Recipes Details</h2>
+    <h2 class="md-display-2">Recipes Details</h2>
 
     <!-- Display Info From API -->
     <div class="infoContainer">
-        <h3>{{recipe.detailsFromApi.response.title}}</h3>
+        <h4 class="md-headline">{{recipe.detailsFromApi.response.title}}</h4>
         <img class="image" ng-src="{{ recipe.recipeInstructions.response.image }}"/>
-        <p ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
-        <p ng-bind-html="recipe.recipeInstructions.response.ingListTrusted"></p>
-        <p ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
+        <p class="md-subhead" ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
+        <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.ingListTrusted"></p>
+        <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
     </div> <!-- end infoContainer -->
   </div>
 </div>

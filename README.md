@@ -32,9 +32,9 @@
 
 [X] Add back buttons to navigate back to previous pages
 
-[X] Focus on Bootstrap and Angular Material styling for all views. - 8hrs
+[X] Focus on Bootstrap and Angular Material styling for all views. - Estimate 8hrs, Actual 9hrs
 
-[ ] Figure out user authentication
+[X] Add multiple users
 
 [ ] Deploy to Heroku. - 5hrs
 
