@@ -2,15 +2,14 @@
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/findByIngredients"><md-button> < go back </md-button></a>
     <h2 class="md-display-2">Recipe Results</h2>
-    <br>
-
     <!-- Display Info From API -->
     <div class="infoContainer">
-      <div id="imgContainer" ng-value="image.image" ng-repeat="image in recipe.infoFromApi.response">
-        <p class="md-display-1">{{image.title}}  </p>
-        <img class="image" ng-src="{{ image.image }}"/>
+      <div class="imgContainer" ng-value="food.image" ng-repeat="food in recipe.infoFromApi.response">
+        <h4 class="md-headline">{{food.title}}</h4>
+        <p><i>{{(food.usedIngredientCount/(food.usedIngredientCount + food.missedIngredientCount))*100 | number: 0}}% match</i></p>
+        <img class="image" ng-src="{{ food.image }}"/>
         <!-- Learn More Buttons -->
-        <a href="#recipeDetails"><md-button ng-click="recipe.learnMore(image.id)">Learn More</md-button></a>
+        <p><a href="#recipeDetails"><md-button ng-click="recipe.learnMore(food.id)">Learn More</md-button></a></p>
         <br><br>
       </div>  <!-- end imgContainer -->
     </div> <!-- end infoContainer -->

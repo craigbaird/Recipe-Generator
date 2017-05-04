@@ -11,15 +11,12 @@ var Ingredients = mongoose.model("Ingredients", IngredientsSchema);
 
 // GET Route to return all ingredients for the authenticated user
 
-
 router.get("/", function(req, res) {
-
 
   // console.log("get /user route");
   // check if logged in
   if(req.isAuthenticated()) {
     var user = req.user._id;
-    console.log(user);
     // send back user object from database
     // console.log("logged in with user", req.user._id);
     // Query for ingredients
@@ -32,7 +29,6 @@ router.get("/", function(req, res) {
       // console.log("response from allIngredients", allIngredients);
     });
     // res.send();
-
   } else {
     // failure best handled on the server. do redirect here.
     console.log("not logged in");

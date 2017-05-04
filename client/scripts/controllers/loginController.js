@@ -6,8 +6,6 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
     };
     $scope.message = "";
 
-
-
     $scope.login = function() {
       if($scope.user.username === "" || $scope.user.password === "") {
         $scope.message = "Enter your username and password!";
@@ -19,7 +17,7 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
             $location.path("/user");
           } else {
             console.log("failure: ", response);
-            $scope.message = "Wrong!!";
+            $scope.message = "Your username or password was wrong. Please try again.";
           }
         });
       }

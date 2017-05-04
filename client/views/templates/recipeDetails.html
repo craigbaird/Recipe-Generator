@@ -1,17 +1,22 @@
   <div layout="column" layout-align="center center">
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/recipeResults"><md-button> < go back </md-button></a>
-    <h2 class="md-display-2">Recipes Details</h2>
+    <h2 class="md-display-2">Recipe Details</h2>
 
     <!-- Display Info From API -->
     <div class="infoContainer">
         <h4 class="md-headline">{{recipe.detailsFromApi.response.title}}</h4>
         <img class="image" ng-src="{{ recipe.recipeInstructions.response.image }}"/>
         <p class="md-subhead" ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
-        <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.ingListTrusted"></p>
-        <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
+
+        <h4><b>Ingredients Needed</b></h4>
         <div ng-repeat="ingredient in recipe.recipeInstructions.response.extendedIngredients">
-          {{ingredient.name}}
+          <p>{{ingredient.originalString}}</p>
         </div>
+        <!-- <div ng-repeat="image in recipe.recipeInstructions.response.extendedIngredients">
+          <img class="thumbImg" ng-source="{{image.image}}">
+        </div> -->
+        <h4><b>Recipe Instructions</b></h4>
+        <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
     </div> <!-- end infoContainer -->
   </div>

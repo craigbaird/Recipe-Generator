@@ -3,7 +3,7 @@ myApp.controller("navController", ["$location", function($location) {
 
   self.state =$location.path();
     self.go=function(path){
-      console.log(path);
+      // console.log(path);
       $location.path(path);
     };
 

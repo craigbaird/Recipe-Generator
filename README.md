@@ -36,6 +36,16 @@
 
 [X] Add multiple users
 
+[ ] Menu icon - sidebar nav
+
+[ ] Add Ingredients and Images to Recipe Details page
+
+[ ] Add % match info to Recipe Results page
+
+[ ] Tabs inactive until info is submitted
+
+[ ] Finishing Styling Touches
+
 [ ] Deploy to Heroku. - 5hrs
 
 #STRETCH GOALS

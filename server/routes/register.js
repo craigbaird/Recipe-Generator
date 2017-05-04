@@ -4,7 +4,6 @@ var passport = require("passport");
 var Users = require("../models/user");
 var path = require("path");
 
-
 // Handles request for HTML file
 router.get("/", function(req, res, next) {
     res.sendFile(path.resolve(__dirname, "../public/views/templates/register.html"));
@@ -23,7 +22,6 @@ router.post("/", function(req, res, next) {
       // recipes : []
     };
 
-
     Users.create(userToSave, function(err, post) {
          if(err) {
            // next() here would continue on and route to routes/index.js
@@ -34,6 +32,5 @@ router.post("/", function(req, res, next) {
          }
     });
 });
-
 
 module.exports = router;
