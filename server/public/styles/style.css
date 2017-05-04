@@ -26,6 +26,9 @@ p {
   text-align: center;
 }
 
+.alert {
+    color: red;
+}
 .display-3 {
   font-size: 60px;
   color: #474646;

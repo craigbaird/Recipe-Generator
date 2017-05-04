@@ -2,6 +2,7 @@
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/findByIngredients"><md-button> < go back </md-button></a>
     <h2 class="md-display-2">Recipe Results</h2>
+    
     <!-- Display Info From API -->
     <div class="infoContainer">
       <div class="imgContainer" ng-value="food.image" ng-repeat="food in recipe.infoFromApi.response">

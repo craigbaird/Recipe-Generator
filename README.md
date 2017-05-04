@@ -48,6 +48,8 @@
 
 [ ] Deploy to Heroku. - 5hrs
 
+[ ] Refractor Code
+
 #STRETCH GOALS
 
 [ ] Build landing Page. - 4hrs
