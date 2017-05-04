@@ -38,9 +38,9 @@
 
 [ ] Menu icon - sidebar nav
 
-[ ] Add Ingredients and Images to Recipe Details page
+[X] Add Ingredients to Recipe Details page
 
-[ ] Add % match info to Recipe Results page
+[X] Add % match info to Recipe Results page
 
 [ ] Tabs inactive until info is submitted
 
