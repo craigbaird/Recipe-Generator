@@ -4,14 +4,6 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
   recipe.logout = UserService.logout;
   recipe.ingredient = {};
 
-
-// // angular material nav bar stuff
-//   (function() {
-//   'use strict';
-//    $rootScope.$on('$routeChangeSuccess', function(event, current) {
-//      $scope.currentLink = getCurrentLinkFromRoute(current);
-//    });
-//   });
   recipe.addIngredient = function(ingredientObject) {
     console.log('ADDING INGREDIENT', ingredientObject);
     // input post new ingredients when you post refresh dropdown ingredients
@@ -79,11 +71,6 @@ myApp.factory("ApiService", ["$http", '$sce', function($http, $sce){
       $http.get("/api/instructions/" + id).then(function(response){
         recipeInstructions.response = response.data;
         recipeInstructions.response.summaryTrusted = $sce.trustAsHtml(recipeInstructions.response.instructions);
-        // for (var i = 0, i <response.extendedIngredients.name.length, i ++) {
-        //   recipeInstructions.response.ingListTrusted = $sce.trustAsHtml(recipeInstructions.response.extendedIngredients[0].name);
-        // };
-        // MAKE THIS SHOW UP ^
-
         console.log("recipe instructions", response);
       }); // end $http.get
     } // end getDetails

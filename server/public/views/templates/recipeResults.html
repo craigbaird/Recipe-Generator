@@ -1,18 +1,17 @@
-<div class="container">
   <div layout="column" layout-align="center center">
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/findByIngredients"><md-button> < go back </md-button></a>
     <h2 class="md-display-2">Recipe Results</h2>
+    <br>
 
     <!-- Display Info From API -->
     <div class="infoContainer">
       <div id="imgContainer" ng-value="image.image" ng-repeat="image in recipe.infoFromApi.response">
-        <p class="md-subhead">{{image.title}}  </p>
+        <p class="md-display-1">{{image.title}}  </p>
         <img class="image" ng-src="{{ image.image }}"/>
-
         <!-- Learn More Buttons -->
         <a href="#recipeDetails"><md-button ng-click="recipe.learnMore(image.id)">Learn More</md-button></a>
+        <br><br>
       </div>  <!-- end imgContainer -->
     </div> <!-- end infoContainer -->
   </div>
-</div>

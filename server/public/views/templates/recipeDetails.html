@@ -1,4 +1,3 @@
-<div class="container">
   <div layout="column" layout-align="center center">
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/recipeResults"><md-button> < go back </md-button></a>
@@ -11,6 +10,8 @@
         <p class="md-subhead" ng-bind-html="recipe.detailsFromApi.response.summaryTrusted"></p>
         <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.ingListTrusted"></p>
         <p class="md-subhead" ng-bind-html="recipe.recipeInstructions.response.summaryTrusted"></p>
+        <div ng-repeat="ingredient in recipe.recipeInstructions.response.extendedIngredients">
+          {{ingredient.name}}
+        </div>
     </div> <!-- end infoContainer -->
   </div>
-</div>
