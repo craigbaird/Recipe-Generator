@@ -50,7 +50,8 @@ if(process.env.MONGODB_URI !== undefined) {
     mongoURI = process.env.MONGODB_URI;
 } else {
     // use the local database server
-    mongoURI = "mongodb://localhost:27017/recipe_generator";
+    // mongoURI = "mongodb://localhost:27017/recipe_generator"; // change to m-lab
+    mongoURI = "mongodb://bairdcraig10:xbr2nma3@ds133261.mlab.com:33261/recipe_generator";
 }
 
 // var mongoURI = "mongodb://localhost:27017/passport";

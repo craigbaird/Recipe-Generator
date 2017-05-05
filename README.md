@@ -46,6 +46,8 @@
 
 [ ] Finishing Styling Touches
 
+[ ] Sweet Alerts for ingredient added
+
 [ ] Deploy to Heroku. - 5hrs
 
 [ ] Refractor Code

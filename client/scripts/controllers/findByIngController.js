@@ -9,6 +9,7 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
     // input post new ingredients when you post refresh dropdown ingredients
     $http.post('/ingredients', ingredientObject).then(function(response){
       getIngredients();
+      recipe.ingredient.name = "";
     });//ends post to addFavorite
   };
 
@@ -24,7 +25,6 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
   // Button functionality for dropdown list
   $scope.findRecipes = function(){
     // console.log("Find Recipes button clicked", $scope.selectedIng);
-    // Sends value to API
     var input = $scope.selectedIng;
     ApiService.getRecipes(input);
   }; // end ingredients.submit
