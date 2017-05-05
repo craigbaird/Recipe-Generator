@@ -6,6 +6,20 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
 
   recipe.addIngredient = function(ingredientObject) {
     console.log('ADDING INGREDIENT', ingredientObject);
+    var ingredient = ingredientObject.name;
+    swal({
+      title: ingredient + ' added!',
+      text: 'Nice.',
+      timer: 1000
+        }).then(
+          function () {},
+          // handling the promise rejection
+          function (dismiss) {
+            if (dismiss === 'timer') {
+              console.log('I was closed by the timer');
+            }
+          }
+        );
     // input post new ingredients when you post refresh dropdown ingredients
     $http.post('/ingredients', ingredientObject).then(function(response){
       getIngredients();
