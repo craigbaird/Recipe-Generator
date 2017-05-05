@@ -26,6 +26,11 @@ p {
   text-align: center;
 }
 
+.belowFindRecipesBtn {
+  width: 100%;
+  height: 30px;
+}
+
 .alert {
     color: red;
 }

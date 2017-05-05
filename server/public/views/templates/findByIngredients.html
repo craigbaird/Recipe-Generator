@@ -18,10 +18,11 @@
     <br><br>
     <!-- Find Recipes By Ingredients -->
     <h4 class="md-headline">Select Ingredients You Have</h4>
-      <md-select multiple="{{false}}" placeholder="Ingredients" ng-model="selectedIng">
+      <md-select multiple="{{false}}" placeholder="Ingredients List" ng-model="selectedIng">
         <md-option ng-value="recipe.ingredient" ng-repeat="recipe in recipe.list">{{ recipe.ingredient }}</md-option>
       </md-select>
     <br>
     <!-- on submit user is redirected to the recipe Results page -->
-    <a href="#/recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
+  <a href="#/recipeResults"><md-button ng-click="findRecipes()">Find Recipes</md-button></a>
+  <div class="belowFindRecipesBtn"></div>
   </div> <!-- end div layout column -->
