@@ -3,7 +3,9 @@
     <div ng-include="'views/partials/nav.html'"></div>
     <h2 class="md-display-2">Welcome to Recipe Generator, {{userObject.userName}}!</h2>
       <p class="md-subhead">If you have groceries at home, but aren't sure what recipes you can make, <i>Recipe Generator</i> can help you out! Get relevant recipes based on ingredients you have, and instructions to make them! Click the <b>Find By Ingredients</b> Tab to get started!</p>
-      <br><br>
-    <md-button ng-click="logout()">Log Out</md-button>
+      <br>
+    <a href="#findByIngredients"><md-button>Get Started!</md-button></a>
+    <br>
+    <md-button class="logOutBtn" ng-click="logout()">Log Out</md-button>
   </div>
 </div>

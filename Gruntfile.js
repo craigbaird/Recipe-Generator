@@ -78,6 +78,13 @@ module.exports = function(grunt){
               "angular-messages.min.js",
               "angular-messages.min.js.map"],
         dest: "server/public/vendors/angular-material/"
+      },
+      sweetAlert2: {
+        expand: true,
+        cwd: "node_modules/sweetalert2/dist/",
+        src: ["sweetalert2.min.css",
+              "sweetalert2.min.js"],
+        dest: "server/public/vendors/sweetalert2/"
       }
     },
     watch: {

@@ -4,8 +4,7 @@
   <md-tabs class="md-primary" md-autoselect="false" md-no-pagination="false" md-center-tabs="false">
     <md-tab label="User Home" md-on-select="vm.go('/user')" md-active="vm.state == '/user'"></md-tab>
     <md-tab label="Find By Ingredients" md-on-select="vm.go('/findByIngredients')" md-active="vm.state == '/findByIngredients'"></md-tab>
-    <md-tab label="Recipe Results" md-on-select="vm.go('/recipeResults')" md-active="vm.state == '/recipeResults'"></md-tab>
-                                                                                                            <!-- ng-disabled="!vm.recipeInstructions.response"-->
-    <md-tab label="Recipe Details" md-on-select="vm.go('/recipeDetails')" md-active="vm.state == '/recipeDetails'"></md-tab>
+    <md-tab label="Recipe Results" md-on-select="vm.go('/recipeResults')" md-active="vm.state == '/recipeResults'" ng-disabled="!vm.infoFromApi.response"></md-tab>
+    <md-tab label="Recipe Details" md-on-select="vm.go('/recipeDetails')" md-active="vm.state == '/recipeDetails'" ng-disabled="!vm.detailsFromApi.response"></md-tab>
   </md-tabs>
 </div>

@@ -43,7 +43,7 @@ myApp.controller("FindByIngController", ["$scope", "$http", "$location" , "ApiSe
 
 }]); // end myApp.controller
 
-myApp.factory("ApiService", ["$http", '$sce', function($http, $sce){
+myApp.factory("ApiService", ["$http", '$sce', "$location", function($http, $sce, $location){
   var infoFromApi = {};
   var detailsFromApi = {};
   var recipeInstructions = {};
@@ -53,6 +53,7 @@ myApp.factory("ApiService", ["$http", '$sce', function($http, $sce){
     getRecipes : function(ingredients){
       $http.get("/api/" + ingredients).then(function(response){
         infoFromApi.response = response.data;
+        $location.path("/recipeResults");
         console.log("relevant recipes", response);
       }); //end $http.get
     },//end getSpoonacular
@@ -62,6 +63,7 @@ myApp.factory("ApiService", ["$http", '$sce', function($http, $sce){
       $http.get("/api/detail/" + id).then(function(response){
         detailsFromApi.response = response.data;
         detailsFromApi.response.summaryTrusted = $sce.trustAsHtml(detailsFromApi.response.summary);
+        $location.path("/recipeDetails");
         console.log("recipe details", response);
       }); // end $http.get
     }, // end getDetails

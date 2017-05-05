@@ -49,7 +49,6 @@ if(process.env.MONGODB_URI !== undefined) {
     // use the string value of the environment variable
     mongoURI = process.env.MONGODB_URI;
 } else {
-    // use the local database server
     // mongoURI = "mongodb://localhost:27017/recipe_generator"; // change to m-lab
     mongoURI = "mongodb://bairdcraig10:xbr2nma3@ds133261.mlab.com:33261/recipe_generator";
 }

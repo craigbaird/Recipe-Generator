@@ -2,7 +2,7 @@
     <div ng-include="'views/partials/nav.html'"></div>
     <a href="#/findByIngredients"><md-button> < go back </md-button></a>
     <h2 class="md-display-2">Recipe Results</h2>
-    
+
     <!-- Display Info From API -->
     <div class="infoContainer">
       <div class="imgContainer" ng-value="food.image" ng-repeat="food in recipe.infoFromApi.response">
@@ -10,7 +10,7 @@
         <p><i>{{(food.usedIngredientCount/(food.usedIngredientCount + food.missedIngredientCount))*100 | number: 0}}% match</i></p>
         <img class="image" ng-src="{{ food.image }}"/>
         <!-- Learn More Buttons -->
-        <p><a href="#recipeDetails"><md-button ng-click="recipe.learnMore(food.id)">Learn More</md-button></a></p>
+        <p><md-button ng-click="recipe.learnMore(food.id)">Learn More</md-button></p>
         <br><br>
       </div>  <!-- end imgContainer -->
     </div> <!-- end infoContainer -->
