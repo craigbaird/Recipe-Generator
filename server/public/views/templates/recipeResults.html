@@ -7,7 +7,7 @@
     <div class="infoContainer">
       <div class="imgContainer" ng-value="food.image" ng-repeat="food in recipe.infoFromApi.response">
         <h4 class="md-headline">{{food.title}}</h4>
-        <p><i>{{(food.usedIngredientCount/(food.usedIngredientCount + food.missedIngredientCount))*100 | number: 0}}% match</i></p>
+        <p class="percentMatch">{{(food.usedIngredientCount/(food.usedIngredientCount + food.missedIngredientCount))*100 | number: 0}}% match</p>
         <img class="image" ng-src="{{ food.image }}"/>
         <!-- Learn More Buttons -->
         <p><md-button ng-click="recipe.learnMore(food.id)">Learn More</md-button></p>
