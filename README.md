@@ -46,7 +46,7 @@ When a user clicks on any recipe, from the recipe results page, they are directe
 
 
 ## Getting Started
-The application is hosted at vast-scrubland-37077.herokuapp.com,
+The application is hosted at - [vast-scrubland-37077.herokuapp.com](https://vast-scrubland-37077.herokuapp.com),
 or these instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 1. Download .zip file
