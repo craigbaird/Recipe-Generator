@@ -6,6 +6,11 @@ Recipe Generator was created to solve a frequent personal problem, which was tha
 ## Product Example
 ![login](login.png)
 ![welcome_screen](welcome_screen.png)
+![find_by_ingredients](find_by_ingredients.png)
+![add_ingredient](add_ingredient.png)
+![select_ingredients](select_ingredients.png)
+![recipe_results](recipe_results.png)
+![recipe_details](recipe_details.png)
 
 ## Getting Started
 The application is hosted at vast-scrubland-37077.herokuapp.com,
