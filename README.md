@@ -6,7 +6,8 @@ Recipe Generator was created to solve a frequent personal problem, which was tha
 ## Product Example
 
 ### Login Page
-![login](login.png) The login page allows a user to login to their account, or if they don't have an account, they can register.
+The login page allows a user to login to their account, or if they don't have an account, they can register.
+![login](login.png)
 
 ### Welcome Page
 The welcome page gives a short intro to the application and tells the user what to do to get started.
