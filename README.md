@@ -4,6 +4,8 @@
 Recipe Generator was created to solve a frequent personal problem, which was that when I wanted to plan meals, I often did not know what recipes that could be made based off of the ingredients I had on hand. Recipe Generator solves this problem by allowing users to create an account and enter ingredients that they have. These ingredients are then sent to an API called Spoonacular that returns recipes including the ingredients entered, and provides images, summaries, ingredients needed, and recipe instructions for each. I had 2 weeks to complete this application. Next steps for this project would be to build out another feature that allows recipes to be saved and ranked.
 
 ## Product Example
+
+### Login View
 ![login](login.png)
 
 The login page allows a user to login to their account, or if they don't have an account, they can register.
