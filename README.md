@@ -1,63 +1,30 @@
-####### MILESTONES #######
+# Recipe Generator
 
-#BASE MODE
+## Description
+Recipe Generator was created to solve a frequent personal problem, which was that when I wanted to plan meals, I often did not know what recipes that could be made based off of the ingredients I had on hand. Recipe Generator solves this problem by allowing users to create an account and enter ingredients that they have. These ingredients are then sent to an API called Spoonacular that returns recipes including the ingredients entered, and provides images, summaries, ingredients needed, and recipe instructions for each. I had 2 weeks to complete this application. Next steps for this project would be to build out another feature that allows recipes to be saved and ranked.
 
-[X] Setup file structure, source all frameworks, and install all dependencies, set up basic call to Spoonacular API. - Estimate 4hrs, Actual 3 hrs
+## Product Example
+![landingImg](landingImg.png)
 
-    [X] Source in Angular Material
+## Getting Started
+The application is hosted at vast-scrubland-37077.herokuapp.com,
+or these instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-[X] Set up user validation and sign in. - Estimate 5hrs, Actual 5hrs
+1. Download .zip file
+2. npm install
+3. npm start
+4. localhost:5000 in browser
 
-[X] Build Find By Ingredients feature - Estimate 16hrs, Actual 17.5hrs
-
-    [X] Set up table in MongoDB to pre populate data
-
-    [X] Input field that lets user save ingredients to DB
-
-    [X] Display ingredients on view
-
-    [X] Pre-populate dropdown from DB
-
-    [X] Send list of ingredients to API
-
-    [X] Display recipe info to DOM
-
-[X] Build Recipe Results feature to display info from the API. - 8hrs
-
-    [X] Learn More button to display recipe summary for each individual recipe
-
-    [X] Make Recipe button to navigate to Recipe Details view
-
-[X] Build Recipe Detail Feature that shows a recipe with instruction to make it. - 6hrs
-
-[X] Add back buttons to navigate back to previous pages
-
-[X] Focus on Bootstrap and Angular Material styling for all views. - Estimate 8hrs, Actual 9hrs
-
-[X] Add multiple users
-
-[ ] Menu icon - sidebar nav
-
-[X] Add Ingredients to Recipe Details page
-
-[X] Add % match info to Recipe Results page
-
-[ ] Tabs inactive until info is submitted
-
-[ ] Finishing Styling Touches
-
-[ ] Sweet Alerts for ingredient added
-
-[X] Deploy to Heroku. - 5hrs
-
-[ ] Refractor Code
-
-#STRETCH GOALS
-
-[ ] Build landing Page. - 4hrs
-
-[ ] Build Favorites page that displays recipes the user has saved from the recipe detail feature and allows user to add their personal ranking. - 10hrs
-
-[ ] Add Search For Recipes button to landing page and the Search and Save Feature that lets the user type in a recipe they want to search the API for. - 8hrs
-
-[ ] Final Visual Touches. - 3hrs
+## Technologies Used
+- JavaScript
+- Angular
+- Node
+- Express
+- MongoDB
+- M-Lab
+- Angular Material
+- HTML
+- CSS
+- Sweet Alert 2
+- Grunt
+- Heroku
