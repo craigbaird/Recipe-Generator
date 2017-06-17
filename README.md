@@ -5,6 +5,7 @@ Recipe Generator was created to solve a frequent personal problem, which was tha
 
 ## Product Example
 ![login](login.png)
+![welcome_screen](welcome_screen.png)
 
 ## Getting Started
 The application is hosted at vast-scrubland-37077.herokuapp.com,
