@@ -5,34 +5,34 @@ Recipe Generator was created to solve a frequent personal problem, which was tha
 
 ## Product Example
 
-### Login View
+### Login Page
+The login page allows a user to login to their account, or if they don't have an account, they can register.
 ![login](login.png)
 
-The login page allows a user to login to their account, or if they don't have an account, they can register.
-
+### Welcome Page
+The welcome page gives a short intro to the application and tells the user what to do to get started.
 ![welcome_screen](welcome_screen.png)
 
-The welcome screen gives a short intro to the application and tells the user what to do to get started.
-
+### Find By Ingredients Page
+The find by ingredients page allows users to add the ingredients they have available at home to their "list".
 ![find_by_ingredients](find_by_ingredients.png)
 
-The find by ingredients page allows users to add the ingredients they have available at home to their "list". 
-
+### Adding Ingredients
+Once a user has added an ingredient, they receive a confirmation and the ingredient is available to select from their "list" below.
 ![add_ingredient](add_ingredient.png)
 
-Once a user has added an ingredient, they receive a confirmation and the ingredient is available to select from their "list" below.
-
+### Selecting Ingredients
+Once the user has added the ingredients they have available, they can select the ones they want to use to search for recipes with.
 ![select_ingredients](select_ingredients.png)
 
-Once the user has added the ingredients they have available, they can select the ones they want to use to search for recipes with.
-
+### Recipe Results Page
+The recipe results page displays several different recipes that the user can make based of of the ingredients they selected. The user can also how closely their ingredients match with each recipe.
 ![recipe_results](recipe_results.png)
 
-The recipe results page displays several different recipes that the user can make based of of the ingredients they selected. The user can also how closely their ingredients match with each recipe.
-
+### Recipe Details Page
+When a user clicks on any recipe, from the recipe results page, they are directed to the recipe details page, which gives them a summary of the selected recipe, the ingredients that are needed, and step by step instructions to make it.
 ![recipe_details](recipe_details.png)
 
-When a user clicks on any recipe, from the recipe results page, they are directed to the recipe details page, which gives them a summary of the selected recipe, the ingredients that are needed, and step by step instructions to make it.
 
 ## Getting Started
 The application is hosted at vast-scrubland-37077.herokuapp.com,
