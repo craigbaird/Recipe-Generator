@@ -19,6 +19,7 @@ The welcome page gives a short intro to the application and tells the user what 
 
 ### Find By Ingredients Page
 The find by ingredients page allows users to add the ingredients they have available at home to their "list".
+
 ![find_by_ingredients](find_by_ingredients.png)
 
 ### Adding Ingredients
