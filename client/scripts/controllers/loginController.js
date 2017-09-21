@@ -9,15 +9,13 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
     $scope.login = function() {
       if($scope.user.username === "" || $scope.user.password === "") {
         // $scope.message = "Please enter your username and password";
-        swal(
-          "You forgot to enter something in.",
-          "Please enter your username and password.",
-          "warning"
+        alert(
+          "You forgot to enter something in. Please enter your username and password."
         );
       } else {
         $http.post("/", $scope.user).then(function(response) {
           if(response.data.username) {
-            // console.log("success: ", response.data);
+            console.log("success: ", response.data);
             // location works with SPA (ng-route)
             $location.path("/user");
           } else {
@@ -36,11 +34,10 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
     $scope.registerUser = function() {
       if($scope.user.username === "" || $scope.user.password === "") {
         // $scope.message = "Please choose a username and password";
-        swal(
-          "You forgot to enter something in.",
-          "Please choose a username and password.",
-          "warning"
+        alert(
+            "You forgot to enter something in. Please choose a username and password."
         );
+
       } else {
         // console.log("sending to server...", $scope.user);
         $http.post("/register", $scope.user).then(function(response) {
@@ -50,9 +47,8 @@ myApp.controller("LoginController", ["$scope", "$http", "$location", "UserServic
         function(response) {
           console.log("error");
           // $scope.message = "Please try again";
-          swal(
-            "Please try again.",
-            "warning"
+          alert(
+            "Please try again."
           );
         });
       }
